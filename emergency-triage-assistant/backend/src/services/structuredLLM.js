@@ -17,11 +17,15 @@ Provide your response in this exact JSON format:
   "uncertainty_level": "Low/Medium/High"
 }`;
 
+  // Use Groq API with system message
   const response = await axios.post(
-    'https://api.openai.com/v1/chat/completions',
+    'https://api.groq.com/openai/v1/chat/completions',
     {
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: prompt }],
+      model: 'llama-3.3-70b-versatile',
+      messages: [
+        { role: 'system', content: 'You are an emergency triage AI assistant.' },
+        { role: 'user', content: prompt }
+      ],
       max_tokens: 400,
       temperature: 0.2
     },

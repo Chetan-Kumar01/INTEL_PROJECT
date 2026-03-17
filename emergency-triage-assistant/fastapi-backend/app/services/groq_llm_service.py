@@ -5,7 +5,7 @@ from typing import Dict, Literal
 class GroqLLMService:
     def __init__(self, api_key: str):
         self.client = AsyncGroq(api_key=api_key)
-        self.model = "llama3-8b-8192"
+        self.model = "llama-3.3-70b-versatile"
         self.temperature = 0.2
         
         # Mode configurations
@@ -23,11 +23,13 @@ class GroqLLMService:
             "deep": {
                 "max_tokens": 400,
                 "system_prompt": (
-                    "You are a senior clinical AI assistant. "
-                    "Provide detailed reasoning. "
-                    "Analyze full medical context. "
-                    "Explain risks, history relevance, and recommended actions. "
-                    "Cite referenced segments."
+                    "You are an intelligent document analysis assistant. "
+                    "Provide detailed and accurate answers based on the provided document context. "
+                    "Answer the user's question directly using only information from the document. "
+                    "If the document contains medical information, provide clinical analysis. "
+                    "If the document contains other information (resume, reports, etc), provide relevant insights. "
+                    "Be concise but comprehensive. "
+                    "Always cite specific parts of the document when referencing information."
                 )
             }
         }

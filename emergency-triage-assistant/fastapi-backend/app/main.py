@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from app.config import get_settings
-from app.routes import upload, chat, upload_pdf, retrieve, query, chat_naive
+from app.routes import upload, chat, upload_pdf, retrieve, query, chat_naive, chat_patient, case_history
 from app.services.llm_service import LLMService
 from app.services.groq_llm_service import GroqLLMService
 import app.services.llm_service as llm_module
@@ -48,6 +48,8 @@ app.include_router(upload_pdf.router)
 app.include_router(retrieve.router)
 app.include_router(query.router)
 app.include_router(chat_naive.router)
+app.include_router(chat_patient.router)
+app.include_router(case_history.router)
 
 @app.get("/")
 async def root():

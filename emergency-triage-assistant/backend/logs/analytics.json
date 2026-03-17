@@ -1,0 +1,182 @@
+[
+  {
+    "timestamp": "2026-03-17T17:05:39.089Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 101,
+      "reduction_percent": 94.09
+    },
+    "latency_metrics": {
+      "compression_ms": 918,
+      "recommendation_ms": 1081,
+      "verification_ms": 1,
+      "confidence_ms": null,
+      "total_ms": 2000
+    },
+    "confidence_score": "55.00",
+    "verification_status": "Needs Review",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T17:18:42.464Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 98,
+      "reduction_percent": 94.27
+    },
+    "latency_metrics": {
+      "compression_ms": 655,
+      "recommendation_ms": 946,
+      "verification_ms": 1,
+      "confidence_ms": 1,
+      "total_ms": 1603
+    },
+    "confidence_score": "70.00",
+    "verification_status": "Mostly Verified",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T17:23:18.548Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 111,
+      "reduction_percent": 93.5
+    },
+    "latency_metrics": {
+      "compression_ms": 1007,
+      "recommendation_ms": 1064,
+      "verification_ms": 2,
+      "confidence_ms": null,
+      "total_ms": 2073
+    },
+    "confidence_score": "55.00",
+    "verification_status": "Needs Review",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T17:33:58.113Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 132,
+      "reduction_percent": 92.28
+    },
+    "latency_metrics": {
+      "compression_ms": 1273,
+      "recommendation_ms": 960,
+      "verification_ms": 1,
+      "confidence_ms": 1,
+      "total_ms": 2235
+    },
+    "confidence_score": "70.00",
+    "verification_status": "Mostly Verified",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T17:41:03.571Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 101,
+      "reduction_percent": 94.09
+    },
+    "latency_metrics": {
+      "compression_ms": 609,
+      "recommendation_ms": 1045,
+      "verification_ms": null,
+      "confidence_ms": 1,
+      "total_ms": 1655
+    },
+    "confidence_score": "55.00",
+    "verification_status": "Needs Review",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T17:42:15.273Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 111,
+      "reduction_percent": 93.5
+    },
+    "latency_metrics": {
+      "compression_ms": 548,
+      "recommendation_ms": 1076,
+      "verification_ms": null,
+      "confidence_ms": null,
+      "total_ms": 1624
+    },
+    "confidence_score": "70.00",
+    "verification_status": "Mostly Verified",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T18:30:30.841Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 98,
+      "reduction_percent": 94.27
+    },
+    "latency_metrics": {
+      "compression_ms": 1023,
+      "recommendation_ms": 1087,
+      "verification_ms": 1,
+      "confidence_ms": null,
+      "total_ms": 2111
+    },
+    "confidence_score": "70.00",
+    "verification_status": "Mostly Verified",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T18:48:01.416Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 111,
+      "reduction_percent": 93.5
+    },
+    "latency_metrics": {
+      "compression_ms": 1433,
+      "recommendation_ms": 1283,
+      "verification_ms": null,
+      "confidence_ms": null,
+      "total_ms": 2716
+    },
+    "confidence_score": "70.00",
+    "verification_status": "Mostly Verified",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T19:04:50.421Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 111,
+      "reduction_percent": 93.5
+    },
+    "latency_metrics": {
+      "compression_ms": 587,
+      "recommendation_ms": 1048,
+      "verification_ms": 1,
+      "confidence_ms": null,
+      "total_ms": 1636
+    },
+    "confidence_score": "70.00",
+    "verification_status": "Mostly Verified",
+    "mode": "optimized"
+  },
+  {
+    "timestamp": "2026-03-17T19:21:06.397Z",
+    "token_counts": {
+      "original": 1709,
+      "compressed": 111,
+      "reduction_percent": 93.5
+    },
+    "latency_metrics": {
+      "compression_ms": 601,
+      "recommendation_ms": 894,
+      "verification_ms": null,
+      "confidence_ms": null,
+      "total_ms": 1495
+    },
+    "confidence_score": "70.00",
+    "verification_status": "Mostly Verified",
+    "mode": "optimized"
+  }
+]

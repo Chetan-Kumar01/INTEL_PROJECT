@@ -11,11 +11,15 @@ ${ruleFilteredText}
 Return only the relevant excerpts:`;
 
   try {
+    // Use Groq API with system message
     const response = await axios.post(
-      'https://api.openai.com/v1/chat/completions',
+      'https://api.groq.com/openai/v1/chat/completions',
       {
-        model: 'gpt-3.5-turbo',
-        messages: [{ role: 'user', content: prompt }],
+        model: 'llama-3.3-70b-versatile',
+        messages: [
+          { role: 'system', content: 'You are a medical AI assistant that extracts relevant information.' },
+          { role: 'user', content: prompt }
+        ],
         max_tokens: 500,
         temperature: 0.1
       },
