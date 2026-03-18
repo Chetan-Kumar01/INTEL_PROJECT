@@ -5,7 +5,7 @@
 
 const express = require('express');
 const router = express.Router();
-const { hybridCall, getStructuredRecommendation } = require('../services/hybridLLM');
+const { hybridCall, getStructuredRecommendation, getDetailedRecommendation } = require('../services/hybridLLM');
 const { compressText } = require('../services/compression');
 const { verifyHallucination } = require('../services/verification');
 const { calculateConfidence } = require('../services/confidence');
@@ -168,6 +168,133 @@ router.post('/naive', async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+/**
+ * POST /api/triage/detailed
+ * Comprehensive triage report with clinical reasoning and detailed descriptions
+ */
+router.post('/detailed', async (req, res) => {
+  const requestStart = Date.now();
+
+  try {
+    const { patientHistory, emergencyDescription, caseDescription } = req.body;
+
+    const history = patientHistory || '';
+    const emergency = emergencyDescription || caseDescription || '';
+
+    if (!history && !emergency) {
+      return res.status(400).json({
+        success: false,
+        error: 'Please provide patientHistory and emergencyDescription',
+      });
+    }
+
+    const performance = {};
+
+    // ===== STAGE 1: COMPRESSION (1-5ms) =====
+    const t1 = Date.now();
+    const fullText = `${history}\n\nEmergency: ${emergency}`;
+    const compressed = compressText(fullText);
+    performance.compression_ms = Date.now() - t1;
+
+    const tokenStats = calculateTokenReduction(fullText, compressed);
+
+    // ===== STAGE 2: DETAILED LLM RECOMMENDATION (300-800ms) =====
+    const t2 = Date.now();
+    const recommendation = await getDetailedRecommendation(
+      history || compressed,
+      emergency
+    );
+    performance.recommendation_ms = Date.now() - t2;
+    performance.provider = recommendation.provider || 'groq';
+    performance.fromCache = recommendation.fromCache || false;
+
+    // ===== STAGE 3: VERIFICATION (5-15ms) =====
+    const t3 = Date.now();
+    const verification = verifyHallucination(fullText, JSON.stringify(recommendation));
+    performance.verification_ms = Date.now() - t3;
+
+    // ===== STAGE 4: CONFIDENCE (1-3ms) =====
+    const t4 = Date.now();
+    const confidence = calculateConfidence(verification.score, tokenStats.reduction);
+    performance.confidence_ms = Date.now() - t4;
+
+    performance.total_ms = Date.now() - requestStart;
+    performance.grade = performance.total_ms <= 800 ? 'EXCELLENT' :
+                        performance.total_ms <= 1500 ? 'GOOD' : 'NEEDS_OPTIMIZATION';
+
+    // Build comprehensive response with detailed information
+    res.json({
+      success: true,
+      mode: 'detailed-groq-ollama',
+      data: {
+        original: fullText,
+        compressed_history: compressed,
+        recommendation: {
+          // Immediate action with full clinical context
+          immediate_action: recommendation.immediate_action || 'Immediate medical evaluation required',
+          immediate_action_rationale: recommendation.immediate_action_rationale || 'Clinical assessment indicates urgent intervention needed',
+          
+          // Differential diagnosis with probabilities and descriptions
+          differential_diagnosis: recommendation.differential_diagnosis || [
+            {
+              diagnosis: 'Assessment pending',
+              probability: 'Unknown',
+              description: 'Requires full clinical evaluation'
+            }
+          ],
+          differential_rationale: recommendation.differential_rationale || 'Multi-system evaluation indicated based on presentation',
+          
+          // Supporting evidence with specific findings
+          supporting_evidence: recommendation.supporting_evidence || 'Based on provided patient data and clinical presentation',
+          
+          // Expanded risk considerations
+          risk_considerations: recommendation.risk_considerations || 'High-risk case requiring careful monitoring',
+          clinical_significance: recommendation.clinical_significance || 'Significant clinical implications requiring intervention',
+          
+          // Time sensitivity and urgency
+          time_sensitivity: recommendation.time_sensitivity || 'Urgent - immediate evaluation recommended',
+          
+          // Next steps for clinician
+          next_clinical_steps: recommendation.next_clinical_steps || 'See immediate action and differential diagnosis',
+          monitoring_requirements: recommendation.monitoring_requirements || 'Continuous monitoring of vital signs and clinical status',
+          
+          // Physician guidance
+          physician_guidance: recommendation.physician_guidance || 'Clinical correlation essential given presentation',
+          
+          // Uncertainty level
+          uncertainty_level: recommendation.uncertainty_level || 'Medium'
+        },
+        tokenStats,
+        verification: {
+          status: verification.verified ? 'Verified' :
+                  verification.score > 50 ? 'Mostly Verified' : 'Needs Review',
+          score: verification.score,
+          verified: verification.verified
+        },
+        confidence: {
+          score: confidence.score || confidence,
+          reasoning: confidence.reasoning || `Confidence based on verification and compression analysis`,
+          level: confidence.level || (parseFloat(confidence.score || confidence) >= 70 ? 'High' : 'Medium')
+        },
+        performance
+      }
+    });
+
+    console.log(`✅ Detailed triage: ${performance.total_ms}ms (${performance.provider}${performance.fromCache ? ' cached' : ''})`);
+
+  } catch (error) {
+    console.error('❌ Detailed triage error:', error.message);
+    const totalLatency = Date.now() - requestStart;
+
+    res.status(500).json({
+      success: false,
+      error: 'Detailed triage processing failed',
+      message: error.message,
+      latency_ms: totalLatency,
+    });
   }
 });
 

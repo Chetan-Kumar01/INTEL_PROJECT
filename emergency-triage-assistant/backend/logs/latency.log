@@ -42,3 +42,13 @@
 2026-03-18T08:06:50.019Z | POST /api/triage | 4ms | success
 2026-03-18T08:07:21.796Z | GET /health | 0ms | success
 2026-03-18T08:07:21.799Z | GET /health | 0ms | success
+2026-03-18T09:13:05.077Z | POST /api/triage | 830ms | success
+2026-03-18T09:18:51.473Z | GET /health | 5ms | success
+2026-03-18T09:18:51.479Z | GET /health | 0ms | success
+2026-03-18T09:18:56.145Z | POST /api/triage | 17ms | success
+2026-03-18T09:20:08.625Z | GET /health | 0ms | success
+2026-03-18T09:20:08.627Z | GET /health | 0ms | success
+2026-03-18T09:20:11.272Z | POST /api/triage | 8ms | success
+2026-03-18T09:24:06.175Z | GET /api/health | 37ms | success
+2026-03-18T09:24:21.107Z | POST /api/triage/detailed | 972ms | success
+2026-03-18T09:24:33.429Z | POST /api/triage/detailed | 999ms | success

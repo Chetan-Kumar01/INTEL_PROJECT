@@ -324,6 +324,84 @@ function getStats() {
 }
 
 /**
+ * Get detailed structured recommendation with comprehensive clinical reasoning
+ */
+async function getDetailedRecommendation(compressedHistory, emergencyDescription) {
+  const startTime = Date.now();
+  
+  const { DETAILED_TRIAGE_PROMPT } = require('../prompts');
+  
+  const systemPrompt = `You are an expert emergency medicine AI providing comprehensive triage assessments with detailed clinical reasoning. 
+Respond ONLY with valid JSON. Include detailed descriptions, clinical rationale, and physician guidance.`;
+  
+  const userPrompt = `Emergency Presentation: ${emergencyDescription}\n\nMedical History: ${compressedHistory}\n\nProvide comprehensive assessment as JSON.`;
+
+  try {
+    const result = await hybridCall(userPrompt, {
+      systemPrompt: systemPrompt,
+      temperature: 0.1,
+      maxTokens: 1500 // Increased for detailed response
+    });
+
+    const totalLatency = Date.now() - startTime;
+
+    // Parse JSON with fallback
+    let parsed;
+    try {
+      const jsonMatch = result.response.match(/\{[\s\S]*\}/);
+      parsed = jsonMatch ? JSON.parse(jsonMatch[0]) : parseDetailedUnstructured(result.response);
+    } catch {
+      parsed = parseDetailedUnstructured(result.response);
+    }
+
+    return {
+      ...parsed,
+      latency_ms: totalLatency,
+      model: result.model,
+      provider: result.provider,
+      fromCache: result.fromCache || false
+    };
+  } catch (error) {
+    console.error('Detailed recommendation error:', error.message);
+    return {
+      immediate_action: "AI service error. Consult emergency services immediately.",
+      immediate_action_rationale: "Service unavailable",
+      differential_diagnosis: [{"diagnosis": "Service unavailable", "probability": "Unknown", "description": "Unable to process"}],
+      differential_rationale: "AI service failed",
+      supporting_evidence: "Unable to process case",
+      risk_considerations: "Immediate medical evaluation required due to service error",
+      clinical_significance: "Cannot assess at this time",
+      time_sensitivity: "Critical - proceed to emergency department immediately",
+      next_clinical_steps: "Professional medical evaluation required",
+      monitoring_requirements: "Full vital sign monitoring in ED",
+      uncertainty_level: "High",
+      physician_guidance: "Patient unable to be triaged by AI. Use clinical judgment.",
+      error: error.message
+    };
+  }
+}
+
+/**
+ * Parse detailed unstructured response as fallback
+ */
+function parseDetailedUnstructured(content) {
+  return {
+    immediate_action: content.substring(0, 300),
+    immediate_action_rationale: "Clinical assessment",
+    differential_diagnosis: [{"diagnosis": "Assessment based on available information", "probability": "Medium", "description": content.substring(300, 500)}],
+    differential_rationale: "Multi-system evaluation indicated",
+    supporting_evidence: content.substring(500, 800),
+    risk_considerations: "High-risk case requiring careful monitoring",
+    clinical_significance: "Acute presentation requiring intervention",
+    time_sensitivity: "Urgent - time-critical intervention likely needed",
+    next_clinical_steps: "See supporting evidence and immediate action",
+    monitoring_requirements: "Continuous cardiac monitoring, vital signs every 5 minutes",
+    uncertainty_level: "Medium",
+    physician_guidance: "Clinical correlation essential given presentation"
+  };
+}
+
+/**
  * Clear cache (for testing)
  */
 function clearCache() {
@@ -334,6 +412,7 @@ function clearCache() {
 module.exports = {
   hybridCall,
   getStructuredRecommendation,
+  getDetailedRecommendation,
   getLLMRecommendation,
   callGroq,
   callOllama,
