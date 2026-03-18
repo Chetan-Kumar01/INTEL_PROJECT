@@ -180,6 +180,19 @@ Provide comprehensive triage assessment with detailed clinical reasoning:
 <|assistant|>
 `;
 
+const FAST_SUMMARY_PROMPT = `<|system|>
+You are a fast emergency triage AI. Return ONLY valid JSON with brief, concise information. No explanations, no markdown, no extra text.
+<|end|>
+<|user|>
+Analyze this emergency case BRIEFLY:
+
+{input}
+
+Return JSON with: {"immediate_action":"action in 1-2 sentences","key_findings":"bullet points","priority":"Critical/Urgent/Standard","summary":"1 paragraph max"}
+<|end|>
+<|assistant|>
+`;
+
 module.exports = {
   TRIAGE_PROMPT,
   CHAT_PROMPT,
@@ -188,5 +201,6 @@ module.exports = {
   VERIFICATION_PROMPT,
   CONFIDENCE_PROMPT,
   STRUCTURED_TRIAGE_PROMPT,
-  DETAILED_TRIAGE_PROMPT
+  DETAILED_TRIAGE_PROMPT,
+  FAST_SUMMARY_PROMPT
 };
