@@ -145,7 +145,7 @@ Please answer the query directly using only the provided context."""
             
             prompt = self._build_phi3_prompt(system_prompt, user_prompt)
             
-            async with httpx.AsyncClient(timeout=10.0) as client:
+            async with httpx.AsyncClient(timeout=None) as client:
                 response = await client.post(
                     self.generate_url,
                     json={
@@ -231,7 +231,7 @@ Provide your clinical assessment."""
             
             prompt = self._build_phi3_prompt(system_prompt, user_prompt)
             
-            async with httpx.AsyncClient(timeout=15.0) as client:
+            async with httpx.AsyncClient(timeout=None) as client:
                 response = await client.post(
                     self.generate_url,
                     json={

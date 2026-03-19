@@ -1,0 +1,1386 @@
+
+> emergency-triage-backend@1.0.0 dev
+> nodemon src/server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-18T17:12:13.794Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-18T17:12:13.794Z - Server running on port 5001
+[INFO] 2026-03-18T17:12:13.794Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-18T17:12:13.794Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 1.822 ms - 152[0m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-18T17:41:29.324Z - CRITICAL: Server failed to start due to Ollama warm-up failure.
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-18T17:50:52.325Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-18T17:50:52.325Z - Server running on port 5001
+[INFO] 2026-03-18T17:50:52.325Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-18T17:50:52.325Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 1ms | status: OK[0m
+[0mGET / [33m404[0m 6.709 ms - 101[0m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T14:48:58.895Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T14:48:58.900Z - Server running on port 5001
+[INFO] 2026-03-19T14:48:58.900Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T14:48:58.900Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 10.641 ms - 151[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.319 ms - 171403[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 8ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 11.183 ms - 171403[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 1.929 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.453 ms - 152[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 8.842 ms - 171403[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 2.310 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.212 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 7.566 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 2.999 ms - 171403[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 40ms | status: OK[0m
+⚡ FAST TRIAGE: 39ms (Groq)
+[0mPOST /api/triage [32m200[0m 39.869 ms - 817[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 4.011 ms - 707[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.727 ms - 163038[0m
+❌ Ollama failed after 320ms: timeout of 280ms exceeded
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:72:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T15:04:03.201Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T15:04:03.202Z - Server running on port 5001
+[INFO] 2026-03-19T15:04:03.202Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T15:04:03.202Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 14ms | status: OK[0m
+⚡ FAST TRIAGE: 12ms (Groq)
+[0mPOST /api/triage [32m200[0m 15.318 ms - 817[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 3.821 ms - 707[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 2.661 ms - 146738[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:72:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T15:04:04.970Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T15:04:04.970Z - Server running on port 5001
+[INFO] 2026-03-19T15:04:04.970Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T15:04:04.970Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 11ms | status: OK[0m
+⚡ FAST TRIAGE: 11ms (Groq)
+[0mPOST /api/triage [32m200[0m 12.025 ms - 817[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 2.830 ms - 707[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 1ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 1.744 ms - 129839[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:72:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T15:06:08.579Z - CRITICAL: Server failed to start due to Ollama warm-up failure.
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:72:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T15:18:19.019Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T15:33:07.739Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T15:33:07.741Z - Server running on port 5001
+[INFO] 2026-03-19T15:33:07.741Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T15:33:07.741Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 10ms | status: OK[0m
+⚡ FAST TRIAGE: 10ms (Groq)
+[0mPOST /api/triage [32m200[0m 11.567 ms - 942[0m
+🐌 Ollama: 2626ms (avg: 2626ms)
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 10.418 ms - 139117[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T15:34:53.954Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T15:34:53.954Z - Server running on port 5001
+[INFO] 2026-03-19T15:34:53.955Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T15:34:53.955Z - 🔥 Production ready with absolute <400ms guarantees.
+🐌 Ollama: 2806ms (avg: 2806ms)
+[31m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2810ms | status: VIOLATION[0m
+⚡ FAST TRIAGE: 2809ms (Groq)
+[0mPOST /api/triage [32m200[0m 2814.330 ms - 1173[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T16:54:39.898Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+[INFO] 2026-03-19T16:54:39.909Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T16:54:39.909Z - Server running on port 5001
+[INFO] 2026-03-19T16:54:39.909Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T16:54:39.909Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T17:01:30.406Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:01:30.406Z - Server running on port 5001
+[INFO] 2026-03-19T17:01:30.407Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:01:30.407Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T17:02:50.030Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:02:50.031Z - Server running on port 5001
+[INFO] 2026-03-19T17:02:50.031Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:02:50.031Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 3.315 ms - 152[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 9.377 ms - 155844[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 10.098 ms - 155844[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+⚡ FAST TRIAGE: 203ms (Groq)
+[0mPOST /api/triage [32m200[0m 204.223 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 12ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 12.364 ms - 8801[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.270 ms - 164327[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:04:31.914Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:05:29.555Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+[INFO] 2026-03-19T17:05:29.560Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:05:29.561Z - Server running on port 5001
+[INFO] 2026-03-19T17:05:29.561Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:05:29.561Z - 🔥 Production ready with absolute <400ms guarantees.
+[INFO] 2026-03-19T17:08:22.682Z - A/B comparison completed in 212ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 214ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 217.758 ms - 2138[0m
+🐌 Ollama: 22157ms (avg: 22157ms)
+🐌 Ollama: 35566ms (avg: 28862ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 1.089 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 6ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 8.702 ms - 164950[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.388 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.347 ms - 164950[0m
+[INFO] 2026-03-19T17:09:05.289Z - A/B comparison completed in 206ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 206ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 206.975 ms - 2159[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 207ms | status: OK[0m
+✅ Detailed triage: 206ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 208.420 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 10ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 10.295 ms - 9410[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.809 ms - 165573[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:09:28.032Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+[INFO] 2026-03-19T17:09:28.039Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:09:28.039Z - Server running on port 5001
+[INFO] 2026-03-19T17:09:28.039Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:09:28.039Z - 🔥 Production ready with absolute <400ms guarantees.
+✅ Ollama health check passed in 22ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 24ms | status: OK[0m
+[0mGET /api/health [32m200[0m 25.674 ms - 279[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+⚡ FAST TRIAGE: 202ms (Groq)
+[0mPOST /api/triage/optimized [32m200[0m 205.347 ms - 816[0m
+🐌 Ollama: 7571ms (avg: 7571ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 1ms | status: OK[0m
+[0mGET /health [32m200[0m 2.442 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.546 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.805 ms - 165573[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 204ms | status: OK[0m
+⚡ FAST TRIAGE: 203ms (Groq)
+[0mPOST /api/triage [32m200[0m 204.804 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 12ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 12.224 ms - 8801[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 7.469 ms - 165587[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:13:17.876Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+[INFO] 2026-03-19T17:13:17.881Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:13:17.882Z - Server running on port 5001
+[INFO] 2026-03-19T17:13:17.882Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:13:17.882Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 206ms | status: OK[0m
+✅ Detailed triage: 204ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 210.998 ms - 1571[0m
+🐌 Ollama: 21683ms (avg: 21683ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 2.426 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 7.551 ms - 165587[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+⚡ FAST TRIAGE: 201ms (Groq)
+[0mPOST /api/triage [32m200[0m 203.608 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 13ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 13.546 ms - 8801[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 15ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 17.000 ms - 165602[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:15:42.615Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+[INFO] 2026-03-19T17:15:42.619Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:15:42.619Z - Server running on port 5001
+[INFO] 2026-03-19T17:15:42.619Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:15:42.619Z - 🔥 Production ready with absolute <400ms guarantees.
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 212ms | status: OK[0m
+⚡ FAST TRIAGE: 211ms (Groq)
+[0mPOST /api/triage [32m200[0m 216.631 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 14ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 14.817 ms - 8801[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:20:01.659Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:23:15.424Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+[INFO] 2026-03-19T17:23:15.431Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:23:15.431Z - Server running on port 5001
+[INFO] 2026-03-19T17:23:15.432Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:23:15.432Z - 🔥 Production ready with absolute <400ms guarantees.
+[INFO] 2026-03-19T17:25:03.932Z - A/B comparison completed in 214ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 216ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 219.141 ms - 2138[0m
+🐌 Ollama: 10469ms (avg: 10469ms)
+🐌 Ollama: 21717ms (avg: 16093ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 1.978 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.303 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 12.092 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 10ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 14.669 ms - 166253[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 205ms | status: OK[0m
+⚡ FAST TRIAGE: 203ms (Groq)
+[0mPOST /api/triage [32m200[0m 205.292 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 12ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 12.396 ms - 8801[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.572 ms - 166266[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:26:57.538Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:83:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:40:02.014Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:41:40.115Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:45:43.543Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:50:25.089Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:53:12.040Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:55:51.855Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T17:57:25.019Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T18:06:54.099Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T18:08:34.493Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T18:12:56.785Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+Failed to warm up Ollama. The model might not be running. timeout of 15000ms exceeded
+[ERROR] 2026-03-19T18:18:07.666Z - WARNING: Server failed to warm up Ollama model initially. Starting server anyway...
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:2016:16)
+    at listenInCluster (node:net:2073:12)
+    at Server.listen (node:net:2178:7)
+    at app.listen (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/node_modules/express/lib/application.js:635:24)
+    at startServer (/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:71:7)
+    at /Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/backend/src/server.js:86:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2052:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v25.6.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m

@@ -6,8 +6,8 @@ from app.services.ultra_fast_rag_service import ultra_fast_rag_service
 from app.routes.upload_pdf import router as upload_pdf_router
 from app.routes.chat_patient import router as chat_patient_router
 from app.routes.case_history import router as case_history_router
-import app.services.groq_llm_service as groq_module
-from app.services.groq_llm_service import GroqLLMService
+import app.services.ollama_llm_service as ollama_module
+from app.services.ollama_llm_service import OllamaLLMService
 import time
 import os
 
@@ -16,8 +16,8 @@ settings = get_settings()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Initialize services on startup."""
-    # Initialize Groq service
-    groq_module.groq_service = GroqLLMService(api_key=settings.groq_api_key)
+    # Initialize Ollama service
+    ollama_module.ollama_service = OllamaLLMService()
     print(f"✓ Ultra-Fast RAG service initialized")
     print(f"✓ Cache size: {len(ultra_fast_rag_service.cache)} scenarios")
     print(f"✓ Target latency: <400ms")

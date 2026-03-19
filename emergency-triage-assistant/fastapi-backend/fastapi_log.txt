@@ -1,0 +1,24 @@
+INFO:     Started server process [72305]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+✅ Loaded 7 cached RAG responses
+✓ PDF Extraction initialized without torch/FAISS dependencies
+✓ Optimized chunk size: 150 tokens
+✓ Lightweight keyword retrieval service initialized
+✓ Ollama LLM service initialized: phi3:mini (Local)
+✓ Response cache enabled: 60s TTL
+✓ Ultra-Fast RAG service initialized
+✓ Cache size: 7 scenarios
+✓ Target latency: <400ms
+✓ Zero external AI dependencies
+✓ Loaded text chunks for patient_medical_report (cached)
+⚡ Retrieval (Keyword): 1.13ms
+⚡ LLM inference: 5838.54ms (mode: deep)
+✓ Cache SET - stored response for future use
+INFO:     127.0.0.1:51639 - "POST /chat_patient HTTP/1.1" 200 OK
+✓ Extracted patient_medical_report: 1 chunks in 8.55ms
+  Breakdown: extract=8ms, chunk=0ms, save=0ms
+INFO:     127.0.0.1:51698 - "POST /upload_pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51698 - "GET /case_history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "GET /case_history HTTP/1.1" 200 OK

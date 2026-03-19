@@ -1,0 +1,418 @@
+
+> emergency-triage-backend@1.0.0 dev
+> nodemon src/server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+✅ Loaded 34 comprehensive triage scenarios
+✅ Loaded 11 chat response templates
+Initiating strict Ollama model warm-up sequence...
+[32mOllama model warm and ready[0m
+[INFO] 2026-03-19T17:38:33.606Z - 🚀 STRICT SLA Emergency Triage Assistant
+[INFO] 2026-03-19T17:38:33.607Z - Server running on port 5001
+[INFO] 2026-03-19T17:38:33.607Z - ✅ Keep-alive background ping enabled for Ollama
+[INFO] 2026-03-19T17:38:33.607Z - 🔥 Production ready with absolute <400ms guarantees.
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.6.1
+52 ms - 157765[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 206ms | status: OK[0m
+⚡ FAST TRIAGE: 205ms (Groq)
+[0mPOST /api/triage [32m200[0m 207.032 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 10ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 11.618 ms - 8801[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 12ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 13.780 ms - 157780[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 204ms | status: OK[0m
+✅ Detailed triage: 204ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 205.608 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 8ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 7.678 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.539 ms - 158402[0m
+[INFO] 2026-03-19T17:39:49.800Z - A/B comparison completed in 205ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 206ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 206.060 ms - 2159[0m
+🐌 Ollama: 43782ms (avg: 43782ms)
+[32m[LATENCY] /api/triage/analyze | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mPOST /api/triage/analyze [33m404[0m 1.420 ms - 119[0m
+❌ Ollama failed after 60008ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60006ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60005ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.895 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.164 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 7.159 ms - 158402[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 4.810 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+⚡ FAST TRIAGE: 202ms (Groq)
+[0mPOST /api/triage [32m200[0m 204.142 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 11ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 10.965 ms - 8801[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.605 ms - 158416[0m
+🐌 Ollama: 57567ms (avg: 50675ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 1.991 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.266 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 12ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 14.416 ms - 158417[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+⚡ FAST TRIAGE: 203ms (Groq)
+[0mPOST /api/triage [32m200[0m 203.503 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 7.691 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 3.950 ms - 158418[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+✅ Detailed triage: 203ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 203.579 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 7.468 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.869 ms - 163118[0m
+[INFO] 2026-03-19T17:45:29.725Z - A/B comparison completed in 203ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 204ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 204.777 ms - 2159[0m
+🐌 Ollama: 50227ms (avg: 50525ms)
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60006ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60005ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+Ollama keep-alive ping failed timeout of 5000ms exceeded
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 2.511 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.190 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 8.554 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.381 ms - 163118[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 205ms | status: OK[0m
+⚡ FAST TRIAGE: 205ms (Groq)
+[0mPOST /api/triage [32m200[0m 206.855 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 9ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 9.466 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 3.733 ms - 166752[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+✅ Detailed triage: 203ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 204.146 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 9ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 8.830 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.389 ms - 170340[0m
+Ollama keep-alive ping failed timeout of 5000ms exceeded
+🐌 Ollama: 48784ms (avg: 50090ms)
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /health [32m200[0m 8.235 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.826 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 6ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 8.144 ms - 170340[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 3.661 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 204ms | status: OK[0m
+⚡ FAST TRIAGE: 204ms (Groq)
+[0mPOST /api/triage [32m200[0m 205.150 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 9ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 9.458 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.645 ms - 170341[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 204ms | status: OK[0m
+✅ Detailed triage: 204ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 204.689 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 6ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 7.138 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.993 ms - 170685[0m
+[INFO] 2026-03-19T17:53:05.085Z - A/B comparison completed in 202ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 203.206 ms - 2159[0m
+🐌 Ollama: 49524ms (avg: 49977ms)
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.496 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.169 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 4.939 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.005 ms - 170685[0m
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.448 ms - 150[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.141 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 4.572 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.183 ms - 170685[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.631 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.549 ms - 170685[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.185 ms - 153[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.700 ms - 170685[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+⚡ FAST TRIAGE: 202ms (Groq)
+[0mPOST /api/triage [32m200[0m 204.068 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 8ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 8.445 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.939 ms - 170420[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+✅ Detailed triage: 203ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 204.800 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 8ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 7.655 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 7.186 ms - 171029[0m
+[INFO] 2026-03-19T17:55:46.523Z - A/B comparison completed in 203ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 203.622 ms - 2159[0m
+🐌 Ollama: 57041ms (avg: 51154ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.514 ms - 154[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.173 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 3.922 ms - 171029[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.160 ms - 171029[0m
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.423 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.592 ms - 171029[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 1ms | status: OK[0m
+[0mGET /health [32m200[0m 1.132 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.345 ms - 171029[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 201ms | status: OK[0m
+⚡ FAST TRIAGE: 201ms (Groq)
+[0mPOST /api/triage [32m200[0m 203.328 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 7.448 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.990 ms - 170420[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+✅ Detailed triage: 202ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 203.731 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 7.922 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.632 ms - 170420[0m
+[INFO] 2026-03-19T17:57:18.825Z - A/B comparison completed in 204ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 205ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 204.689 ms - 2159[0m
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60005ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 1.609 ms - 154[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.199 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 5.790 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 4.429 ms - -[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.631 ms - 154[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.150 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.016 ms - 170420[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.265 ms - 170420[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+⚡ FAST TRIAGE: 202ms (Groq)
+[0mPOST /api/triage [32m200[0m 203.355 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 9ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 9.104 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 7.545 ms - 170420[0m
+🐌 Ollama: 39208ms (avg: 49448ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.616 ms - 154[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.120 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.573 ms - 170420[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+⚡ FAST TRIAGE: 202ms (Groq)
+[0mPOST /api/triage [32m200[0m 202.570 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 9ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 9.343 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.173 ms - 170420[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+✅ Detailed triage: 203ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 203.687 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 8ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 8.855 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.435 ms - 171029[0m
+🐌 Ollama: 27627ms (avg: 46720ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.688 ms - 154[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.191 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.483 ms - 171029[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 4.093 ms - -[0m
+❌ Ollama failed after 60001ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.284 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 5ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.260 ms - 171029[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.109 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.210 ms - 171029[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.448 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.692 ms - 171029[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.126 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.313 ms - 171029[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 201ms | status: OK[0m
+⚡ FAST TRIAGE: 201ms (Groq)
+[0mPOST /api/triage [32m200[0m 202.552 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 7ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 8.054 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.747 ms - 171029[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 203ms | status: OK[0m
+✅ Detailed triage: 202ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 203.764 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 8ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 8.755 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.890 ms - 171029[0m
+[INFO] 2026-03-19T18:12:50.530Z - A/B comparison completed in 203ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 204ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 204.059 ms - 2159[0m
+🐌 Ollama: 50344ms (avg: 47123ms)
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.429 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.199 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 4.688 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.090 ms - 171029[0m
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60004ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[LATENCY] /api/triage/analyze | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mPOST /api/triage/analyze [33m404[0m 0.747 ms - 119[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.399 ms - 153[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.214 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.644 ms - 171029[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 2ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 3.725 ms - 171029[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 6.362 ms - 171029[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.296 ms - 154[0m
+[32m[LATENCY] /health | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 0ms | status: OK[0m
+[0mGET /health [32m200[0m 0.129 ms - 154[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [36m304[0m 5.345 ms - -[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+⚡ FAST TRIAGE: 202ms (Groq)
+[0mPOST /api/triage [32m200[0m 203.108 ms - 16485[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 9ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 9.416 ms - 8800[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 4ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 5.219 ms - 171029[0m
+[32m[LATENCY] /detailed | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 202ms | status: OK[0m
+✅ Detailed triage: 201ms (timeout-fallback)
+[0mPOST /api/triage/detailed [32m200[0m 202.148 ms - 17244[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 6ms | status: OK[0m
+[0mPOST /api/history [32m201[0m 6.220 ms - 9409[0m
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 3ms | status: OK[0m
+[0mGET /api/history?limit=20 [32m200[0m 4.163 ms - 180153[0m
+[INFO] 2026-03-19T18:17:54.334Z - A/B comparison completed in 204ms
+[32m[LATENCY] / | cache: 0ms | embedding: 0ms | retrieval: 0ms | llm: 0ms | total: 204ms | status: OK[0m
+[0mPOST /api/compare [32m200[0m 204.057 ms - 2159[0m
+🐌 Ollama: 41352ms (avg: 46546ms)
+Ollama keep-alive ping failed timeout of 5000ms exceeded
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60005ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+❌ Ollama failed after 60003ms: timeout of 60000ms exceeded
+Hybrid AI: Both configured AI models failed to respond.
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node src/server.js`[39m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.6.1

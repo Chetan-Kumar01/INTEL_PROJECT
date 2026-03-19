@@ -2,7 +2,7 @@ const axios = require('axios');
 const cache = require('./cache');
 
 // Hardcoded unchangeable constants requested by Senior AI/Infra Engineer
-const OLLAMA_BASE_URL = 'http://localhost:11434';
+const OLLAMA_BASE_URL = 'http://127.0.0.1:11434';
 const OLLAMA_MODEL = 'phi3:mini';
 
 const STRICT_OLLAMA_PARAMS = Object.freeze({

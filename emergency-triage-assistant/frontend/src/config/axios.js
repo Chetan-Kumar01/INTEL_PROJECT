@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-// Create a globally configured axios instance targeted for strictly <400ms SLA
+// Create a globally configured axios instance targeted for local LLM usage
 const api = axios.create({
-  // Global 380ms timeout leaving 20ms for network transit
-  timeout: 380
+  // Extended timeout to 60s to allow for local model processing
+  timeout: 60000
 });
 
-// Interceptor to uniformly handle the 380ms timeout across the entire app
+// Interceptor to uniformly handle the timeout across the entire app
 api.interceptors.response.use(
   (response) => {
     // Inject the raw latency measurement into the response data for the LatencyBadge

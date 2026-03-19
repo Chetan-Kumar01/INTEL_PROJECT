@@ -1,0 +1,16 @@
+INFO:     Will watch for changes in these directories: ['/Users/chetanjanmejay/Desktop/Intel_HP/INTEL_PROJECT/emergency-triage-assistant/fastapi-backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [41725] using WatchFiles
+INFO:     Started server process [41948]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ Loaded 7 cached RAG responses
+✓ PDF Extraction initialized without torch/FAISS dependencies
+✓ Optimized chunk size: 150 tokens
+✓ Lightweight keyword retrieval service initialized
+✓ Groq LLM service initialized: llama-3.1-8b-instant
+✓ Ultra-Fast RAG service initialized
+✓ Cache size: 7 scenarios
+✓ Target latency: <400ms
+✓ Zero external AI dependencies
+INFO:     127.0.0.1:63022 - "GET /health HTTP/1.1" 200 OK

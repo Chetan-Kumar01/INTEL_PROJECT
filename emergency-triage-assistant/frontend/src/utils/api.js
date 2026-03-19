@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'http://localhost:5001/api';
 
 export const processOptimized = async (caseDescription, apiKey) => {
   const response = await axios.post(`${API_BASE}/triage/optimized`, {

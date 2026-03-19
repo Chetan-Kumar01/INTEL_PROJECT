@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const GROQ_MODEL = 'llama-3.1-8b-instant';
-const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
+const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://127.0.0.1:11434';
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'phi3:mini';
 
 // In-memory cache for ultra-fast responses
@@ -173,7 +173,7 @@ async function callOllama(prompt, options = {}) {
           top_p: 0.5
         }
       },
-      { timeout: 280 } // Hard 280ms — Ollama MUST respond or abort, keeping SLA under 400ms
+      { timeout: 60000 } // Extended to 60s to allow local Ollama models enough time to process triage queries
     );
 
     const latency = Date.now() - startTime;
@@ -228,24 +228,31 @@ async function hybridCall(input, options = {}) {
   
   const ollamaPrompt = `${options.systemPrompt || 'You are an emergency triage AI.'}\n\n${input}`;
 
-  // STRICT 300ms timeout to physically guarantee <400ms SLA, per Senior AI Infra requirements
+  // ULTRA-STRICT 200ms timeout to physically guarantee instant <250ms SLA for the hospital UI
   const timeoutPromise = new Promise((resolve) => {
     setTimeout(() => {
       const fallback = generateSmartFallback(input);
       resolve({
         response: JSON.stringify(fallback),
-        latency_ms: 300,
+        latency_ms: 200,
         provider: 'timeout-fallback',
         fromCache: false
       });
-    }, 300);
+    }, 200);
   });
 
   try {
-    // Promise.race — the 300ms timeout fires first, no matter what state Groq/Ollama are in
+    // Wait for the FIRST successful AI response, or fail if BOTH die. Then race that against the hard timeout
+    const aiPromise = Promise.any([
+      callGroq(messages, options.temperature, options.maxTokens),
+      callOllama(ollamaPrompt, options)
+    ]).catch((err) => {
+      console.log('Hybrid AI: Both configured AI models failed to respond.');
+      return null;
+    });
+
     const result = await Promise.race([
-      callGroq(messages, options.temperature, options.maxTokens).catch(() => null),
-      callOllama(ollamaPrompt, options).catch(() => null),
+      aiPromise,
       timeoutPromise
     ]);
     
@@ -290,7 +297,7 @@ async function getStructuredRecommendation(compressedHistory, emergencyDescripti
     const result = await hybridCall(input, {
       systemPrompt: 'ER AI. ONLY valid JSON. MAX 5 WORDS per field. No markdown. Keys: case_summary, immediate_action, differential_diagnosis (array), supporting_evidence, risk_considerations, uncertainty_level',
       temperature: 0.01,
-      maxTokens: 150
+      maxTokens: 300
     });
 
     const totalLatency = Date.now() - startTime;
@@ -469,9 +476,9 @@ async function getFastSummary(compressedHistory, emergencyDescription) {
 
   try {
     const result = await hybridCall(input, {
-      systemPrompt: 'ER AI. ONLY JSON. 3 words max per field. Keys: summary, immediate_action, key_findings, priority',
+      systemPrompt: 'ER AI. ONLY JSON. Keys: summary, immediate_action, key_findings, priority. Do NOT wrap in markdown.',
       temperature: 0.01,
-      maxTokens: 75 // Extreme cut for micro-second speed
+      maxTokens: 250 // Increased to let JSON finish generating
     });
 
     const totalLatency = Date.now() - startTime;

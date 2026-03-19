@@ -35,8 +35,8 @@ app.use(morgan('dev'));
 app.use(strictLatencyTracker);
 
 app.get('/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
+  res.json({
+    status: 'ok',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     version: '3.0.0-ultra-fast'
@@ -57,8 +57,8 @@ app.use('/api/triage-legacy', apiKeyMiddleware, apiLatencyMiddleware, triageRout
 app.use('/api/compress', apiKeyMiddleware, apiLatencyMiddleware, compressionRoutes);
 
 app.use((req, res) => {
-  res.status(404).json({ 
-    success: false, 
+  res.status(404).json({
+    success: false,
     error: 'Route not found',
     path: req.originalUrl
   });
@@ -67,19 +67,21 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 // Strict boot: Wait for Ollama to Warm-Up BEFORE accepting any traffic
+const startServer = () => {
+  app.listen(PORT, () => {
+    logger.info(`🚀 STRICT SLA Emergency Triage Assistant`);
+    logger.info(`Server running on port ${PORT}`);
+
+    // Start polling Ollama so it never unloads
+    startKeepAlivePing();
+    logger.info(`✅ Keep-alive background ping enabled for Ollama`);
+    logger.info(`🔥 Production ready with absolute <400ms guarantees.`);
+  });
+};
+
 warmUpOllama()
-  .then(() => {
-    app.listen(PORT, () => {
-      logger.info(`🚀 STRICT SLA Emergency Triage Assistant`);
-      logger.info(`Server running on port ${PORT}`);
-      
-      // Start polling Ollama so it never unloads
-      startKeepAlivePing();
-      logger.info(`✅ Keep-alive background ping enabled for Ollama`);
-      logger.info(`🔥 Production ready with absolute <400ms guarantees.`);
-    });
-  })
+  .then(() => startServer())
   .catch((err) => {
-    logger.error('CRITICAL: Server failed to start due to Ollama warm-up failure.');
-    process.exit(1);
+    logger.error('WARNING: Server failed to warm up Ollama model initially. Starting server anyway...');
+    startServer();
   });

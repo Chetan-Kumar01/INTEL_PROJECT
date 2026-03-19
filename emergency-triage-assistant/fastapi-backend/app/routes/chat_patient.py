@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Literal, Optional
 from app.services.fast_retrieval_service import retrieval_service
-import app.services.groq_llm_service as groq_module
+import app.services.ollama_llm_service as ollama_module
 
 router = APIRouter(tags=["patient-chat"])
 
@@ -49,9 +49,9 @@ async def chat_with_patient_data(request: PatientChatRequest):
             for chunk in context_chunks
         ])
         
-        # Generate answer using Groq
-        groq_service = groq_module.groq_service
-        llm_result = await groq_service.generate(
+        # Generate answer using Ollama
+        ollama_service = ollama_module.ollama_service
+        llm_result = await ollama_service.generate(
             context=context_text,
             query=request.question,
             mode=request.mode

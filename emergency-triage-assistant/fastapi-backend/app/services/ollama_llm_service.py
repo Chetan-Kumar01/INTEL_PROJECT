@@ -91,7 +91,7 @@ class OllamaLLMService:
         num_predict = 50 if mode == "emergency" else 100
         
         try:
-            async with httpx.AsyncClient(timeout=5.0) as client:
+            async with httpx.AsyncClient(timeout=None) as client:
                 llm_start = time.time()
                 
                 response = await client.post(
@@ -132,10 +132,10 @@ class OllamaLLMService:
                 return response_data
         
         except Exception as e:
-            print(f"❌ Ollama error: {str(e)}")
+            print(f"❌ Ollama error: {repr(e)}")
             # Fallback response
             return {
-                "answer": "AI service temporarily unavailable. Please ensure Ollama is running on localhost:11434.",
+                "answer": f"AI service temporarily unavailable. Error: {str(e)}",
                 "llm_latency_ms": round((time.time() - start_time) * 1000, 2)
             }
     
@@ -161,7 +161,7 @@ Provide your clinical assessment."""
         prompt = self.format_general_prompt(system_message, user_message)
         
         try:
-            async with httpx.AsyncClient(timeout=15.0) as client:
+            async with httpx.AsyncClient(timeout=None) as client:
                 response = await client.post(
                     f"{self.base_url}/api/generate",
                     json={

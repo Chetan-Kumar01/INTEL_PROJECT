@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { patients } from '../data/patients';
 import RunTriageModal from '../components/triage/RunTriageModal';
+import AddPatientModal from '../components/patients/AddPatientModal';
 
 const SEVERITY = {
   CRITICAL: { bg: 'rgba(239,68,68,0.15)', color: '#ef4444', border: 'rgba(239,68,68,0.3)' },
@@ -22,6 +23,7 @@ export default function PatientsView() {
   const [severityFilter, setSeverityFilter] = useState('All');
   const [expandedReport, setExpandedReport] = useState(null);
   const [isTriageModalOpen, setIsTriageModalOpen] = useState(false);
+  const [isAddPatientOpen, setIsAddPatientOpen] = useState(false);
   const [patientsList, setPatientsList] = useState(patients);
 
   const filteredPatients = patientsList.filter(p => {
@@ -46,6 +48,11 @@ export default function PatientsView() {
 
   const handleRunNewTriage = () => {
     setIsTriageModalOpen(true);
+  };
+
+  const handleAddPatient = (newPatient) => {
+    setPatientsList([newPatient, ...patientsList]);
+    setSelectedPatient(newPatient);
   };
 
   const handleSaveReport = (report) => {
@@ -75,6 +82,17 @@ export default function PatientsView() {
         
         {/* Search & Filters */}
         <div style={{ padding: '20px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <h2 style={{ color: '#fff', fontSize: '18px', margin: 0, fontWeight: 700 }}>Patients</h2>
+            <button 
+              onClick={() => setIsAddPatientOpen(true)}
+              style={{ background: '#7c3aed', color: '#fff', border: 'none', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s' }}
+              onMouseEnter={(e) => e.target.style.background = '#6d28d9'}
+              onMouseLeave={(e) => e.target.style.background = '#7c3aed'}
+            >
+              + New Patient
+            </button>
+          </div>
           <input
             type="text"
             placeholder="🔍 Search by name or ID..."
@@ -94,25 +112,31 @@ export default function PatientsView() {
           />
           
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-            {['All', 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW'].map(sev => (
-              <button
-                key={sev}
-                onClick={() => setSeverityFilter(sev)}
-                style={{
-                  padding: '6px 12px',
-                  borderRadius: '6px',
-                  fontSize: '11px',
-                  fontWeight: 700,
-                  border: 'none',
-                  cursor: 'pointer',
-                  background: severityFilter === sev ? '#7c3aed' : 'rgba(255,255,255,0.05)',
-                  color: severityFilter === sev ? '#fff' : '#9ca3af',
-                  transition: 'all 0.2s',
-                }}
-              >
-                {sev}
-              </button>
-            ))}
+            {['All', 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW'].map(sev => {
+              const count = sev === 'All' 
+                ? patientsList.length 
+                : patientsList.filter(p => getHighestSeverity(p) === sev).length;
+              
+              return (
+                <button
+                  key={sev}
+                  onClick={() => setSeverityFilter(sev)}
+                  style={{
+                    padding: '6px 12px',
+                    borderRadius: '6px',
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    border: 'none',
+                    cursor: 'pointer',
+                    background: severityFilter === sev ? '#7c3aed' : 'rgba(255,255,255,0.05)',
+                    color: severityFilter === sev ? '#fff' : '#9ca3af',
+                    transition: 'all 0.2s',
+                  }}
+                >
+                  {sev} ({count})
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -586,6 +610,11 @@ export default function PatientsView() {
         currentMedications: selectedPatient.medicalHistory?.currentMedications || []
       }}
       onSaveReport={handleSaveReport}
+    />
+    <AddPatientModal
+      isOpen={isAddPatientOpen}
+      onClose={() => setIsAddPatientOpen(false)}
+      onAddPatient={handleAddPatient}
     />
     </>
   );
